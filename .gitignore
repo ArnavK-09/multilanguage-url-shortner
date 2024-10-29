@@ -45,7 +45,7 @@ app.*.map.json
 # genrated
 linux
 macos
-# web
+webc
 windows
 ios 
 android
