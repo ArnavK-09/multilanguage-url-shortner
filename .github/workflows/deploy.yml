@@ -9,6 +9,11 @@ concurrency:
   group: deploy-web
   cancel-in-progress: true
 
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+  
 jobs:
   build:
     runs-on: ubuntu-latest
