@@ -52,14 +52,14 @@ class _UrlShortenerScreenState extends State<UrlShortenerScreen> {
     try {
       // Attempt to load the localized JSON based on the selected language
       String jsonString =
-          await rootBundle.loadString('i18n/$_selectedLanguage.json');
+          await rootBundle.loadString('assets/i18n/$_selectedLanguage.json');
       setState(() {
         _localizedText = Map<String, String>.from(
             json.decode(jsonString)); // Parse and store localized text
       });
     } catch (e) {
       // Fallback to English if the selected language file doesn't exist
-      String jsonString = await rootBundle.loadString('i18n/en.json');
+      String jsonString = await rootBundle.loadString('assets/i18n/en.json');
       setState(() {
         _localizedText = Map<String, String>.from(
             json.decode(jsonString)); // Parse and store English text

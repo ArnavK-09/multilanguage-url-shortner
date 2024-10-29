@@ -35,3 +35,4 @@ jobs:
           folder: build/web
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
