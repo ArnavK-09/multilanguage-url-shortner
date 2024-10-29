@@ -25,9 +25,6 @@ jobs:
       - name: Upgrade
         run: flutter upgrade
 
-      - name: Config
-        run: flutter config --enable-web
-
       - name: Install dependencies
         run: flutter pub get
 
