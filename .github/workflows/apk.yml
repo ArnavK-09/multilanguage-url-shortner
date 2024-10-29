@@ -6,6 +6,12 @@ on:
       - master
   pull_request:
 
+
+concurrency:
+  group: build-apk
+  cancel-in-progress: true
+
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -24,7 +30,6 @@ jobs:
         uses: subosito/flutter-action@v2
         with:
           channel: stable
-          flutter-version-file: pubspec.yaml
 
       - name: Install dependencies
         run: flutter pub get
